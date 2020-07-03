@@ -5,16 +5,19 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
+	<link rel="sortcut icon" href="resources/images/cadastro-ico.png"></link>
 	<title>Página JSF</title>
 </h:head>
 
 <h:body>
 
 	<h:form>
+	
+		<h:graphicImage value="resources/images/cadastro-ico.png" width="40px"/>
 		
 		<h:panelGrid columns="2">
 		<f:facet name="header">
-			<h:outputText value="Cadastro JSF" />
+			Cadastro JSF
 		</f:facet>
 		
 		<h:outputLabel value="ID:" />
@@ -28,6 +31,13 @@
 		
 		<h:outputLabel value="Idade:" />
 		<h:inputText value="#{pessoaBean.pessoa.idade}" />
+		
+		<h:outputLabel value="Sexo:" />
+		<h:selectOneMenu id="sexo" value="#{pessoaBean.pessoa.sexo}" required="true">
+			<f:selectItem itemValue="Selecione" noSelectionOption="true"/>
+			<f:selectItem itemValue="Masculino" />
+			<f:selectItem itemValue="Feminino" />
+		</h:selectOneMenu>
 		
 		<h:outputLabel>Opções</h:outputLabel>
 		
