@@ -1,1 +1,1 @@
-web: java -jar target/Cadastro-JSF-JPA-Hibernate.jar
+web: java -jar target/*.jar
