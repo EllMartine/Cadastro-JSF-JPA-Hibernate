@@ -1,0 +1,1 @@
+web: java -jar target/Cadastro-JSF-JPA-Hibernate.jar
