@@ -60,12 +60,12 @@ public class DaoGeneric<E> {
 	
 	public List<E> getListEntity(Class<E> entity) {
 		EntityManager entityManager = JPAUtil.getEntityManager();
-		EntityTransaction enTransaction = entityManager.getTransaction();
-		enTransaction.begin();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		entityTransaction.begin();
 		
 		List<E> list = entityManager.createQuery("from " + entity.getName()).getResultList();
 		
-		enTransaction.commit();
+		entityTransaction.commit();
 		entityManager.close();
 		
 		return list;
